@@ -6,7 +6,7 @@ let contador = {
   },
 };
 contador.siguiente()
-// console.log(contador.siguiente());
+// console.log(contador.siguiente()); Edward
   export { contador }
 
 
