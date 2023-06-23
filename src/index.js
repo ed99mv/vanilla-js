@@ -15,13 +15,16 @@ function MhoraActual() {
 setInterval(MhoraActual, 1000)
 
 
-var divUsers=document.getElementById("div_users")
+
 fetch("http://localhost:3000/users")
   .then((data=>data.json()))
   .then(users=>{
     
     console.log(users);
-    
+})
+   .catch((error)=>{
+    alert("Error en la petición")
+})    
 
   
 
@@ -34,10 +37,7 @@ fetch("http://localhost:3000/users")
 
     })*/
     
-})
-.catch((error)=>{
-  alert("Error en la petición")
-})
+
 
 /*var datos={
   "mohademago": {
