@@ -4,7 +4,11 @@ function MhoraActual() {
 
     
     let hora=new Date();
-    let horaH=hora.getHours()
+
+    let horaH= document.createElement('p')
+    horaH.id="horaH"
+     horaH=hora.getHours()
+    // horaH.id= "caa"
     let horaM=hora.getMinutes()
     let horaS=hora.getSeconds()
 
@@ -12,19 +16,24 @@ function MhoraActual() {
 }    
   MhoraActual()  
 
+
+
+
+
+
+
+
 setInterval(MhoraActual, 1000)
 
+  fetch("http://localhost:3000/users")
+    .then(data=>data.json())
+    .then(users=>{
+      console.log(users);
+    })
 
-
-fetch("http://localhost:3000/users")
-  .then((data=>data.json()))
-  .then(users=>{
-    
-    console.log(users);
-})
-   .catch((error)=>{
-    alert("Error en la petición")
-})    
+//    .catch((error)=>{
+//     alert("Error en la petición")
+// })    
 
   
 
